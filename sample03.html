@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample03 v属性について</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <span v-bind:title="message">この文字列にマウスオーバーして下さい</span>
+    </div>
+    <script>
+        const appData = {
+            data() {
+                return {
+                    message: "あなたがこのページを読み込んだのは " + new Date().toLocaleString(),
+                }
+            }
+        }
+        Vue.createApp(appData).mount("#app")
+    </script>
+</body>
+
+</html>

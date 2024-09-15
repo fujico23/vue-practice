@@ -7,16 +7,21 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="app">{{ message }}</div>
+    <div id="counter">Counter:{{ counter }}</div>
     <script>
-        const vm = {
+        const Counter = {
             data() {
                 return {
-                    message:"Hello world"
+                    counter: 0,
                 }
+            },
+            mounted() {
+                setInterval(() => {
+                    this.counter++
+                }, 1000)
             }
         }
-        Vue.createApp(vm).mount('#app')
+        Vue.createApp(Counter).mount('#counter')
     </script>
 </body>
 </html>
