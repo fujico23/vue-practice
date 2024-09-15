@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vue3 sample</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    
+    <div id="app">{{ message }}</div>
+    <script>
+        const vm = {
+            data() {
+                return {
+                    message:"Hello world"
+                }
+            }
+        }
+        Vue.createApp(vm).mount('#app')
+    </script>
 </body>
 </html>
